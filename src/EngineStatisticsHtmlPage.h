@@ -59,7 +59,7 @@ const static char ENGINE_STATISTICS_HTML_PAGE[] PROGMEM = "<!DOCTYPE html>\n"
 		"document.body.appendChild(charts[1].init(maxSize, 345));\n"
 		"initChart(0);\n"
 		"initChart(1);\n"
-		"setTimeout(loadChartData, 100);}\n"
+		"setTimeout(loadChartData, 1500);}\n"
 		"</script>\n"
 		"</head><body onload='loaded();'></body></html";
 

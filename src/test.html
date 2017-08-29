@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript">
+var scriptNames=new Array('settings1.js','settings2.js','settings3.js','common.js','');
+var scriptNameIndex=-1;
+function loadScript(){
+var script = document.createElement('script');
+script.onerror = function(err){scriptNameIndex--;onScriptLoad();}
+script.onload=function(){onScriptLoad();};
+script.src = location.protocol + '//' + location.hostname +  '/js/' + scriptNames[scriptNameIndex];
+document.head.appendChild(script);}
+function onScriptLoad(){scriptNameIndex++;if(scriptNames[scriptNameIndex]!=''){loadScript()}else{onAllScriptLoaded();}}
+function onAllScriptLoaded(){alert('12')}
+function onReady(){onScriptLoad();}
+    </script>
+</head>
+<body onload='onReady()'>
+
+</body>
+</html>

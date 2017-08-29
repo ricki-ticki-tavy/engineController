@@ -58,7 +58,7 @@ SettingsManager::SettingsManager(){
 		globalSettings->coefE = 0.1;
 		globalSettings->maxAbsISum = 600.0;
 		globalSettings->diffMin = 3;
-		globalSettings->pidPeriodMs = 10;
+		globalSettings->pidPeriodMs = 20;
 
 		globalSettings->leftForwardPWMChannel = 0;
 		globalSettings->leftBackwardPWMChannel = 1;
