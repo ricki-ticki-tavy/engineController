@@ -54,9 +54,9 @@ SettingsManager::SettingsManager(){
 
 		globalSettings->coefP = 0.8;
 		globalSettings->coefD = -1.6;
-		globalSettings->coefI = 0.01;
+		globalSettings->coefI = 0.04;
 		globalSettings->coefE = 0.1;
-		globalSettings->maxAbsISum = 600.0;
+		globalSettings->maxAbsISum = 1000.0;
 		globalSettings->diffMin = 3;
 		globalSettings->pidPeriodMs = 20;
 
@@ -64,14 +64,14 @@ SettingsManager::SettingsManager(){
 		globalSettings->leftBackwardPWMChannel = 1;
 		globalSettings->rightForwardPWMChannel = 2;
 		globalSettings->rightBackwardPWMChannel = 3;
-		globalSettings->pwmFrequency = 870;
+		globalSettings->pwmFrequency = 400;
 
 		globalSettings->leftEncoderGpioPin = 3;
 		globalSettings->rightEncoderGpioPin = 1;
 
 
 		globalSettings->maxPower = 3800;
-		globalSettings->minPower = 800;
+		globalSettings->minPower = 200;
 
 		globalSettings->maxRotateSpeed = 6000;
 

@@ -23,6 +23,9 @@ TankPerepherialController::TankPerepherialController(){
 
 	wifiManager = new WifiManager(hardwareController->deviceInfo, hardwareController->enginePowerController, hardwareController->pwmPCA9685Driver);
 
+	spiSlaveListener = new SpiSlaveListener(hardwareController->deviceInfo, hardwareController->enginePowerController);
+	spiSlaveListener->init();
+
 //pinMode(12, OUTPUT);
 }
 

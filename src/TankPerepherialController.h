@@ -15,6 +15,7 @@
 #include "SettingsManager.h"
 #include "HardwareController.h"
 #include "WifiManager.h"
+#include "SpiSlaveListener.h"
 
 namespace tankController{
 
@@ -23,6 +24,7 @@ public:
 	SettingsManager* settingsManager;
 	WifiManager* wifiManager;
 	HardwareController* hardwareController;
+	SpiSlaveListener* spiSlaveListener;
 
 	TankPerepherialController();
 

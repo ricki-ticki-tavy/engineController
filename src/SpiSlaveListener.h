@@ -5,10 +5,20 @@
 #ifndef ENGINECONTROLLER_SPISLAVELISTENER_H
 #define ENGINECONTROLLER_SPISLAVELISTENER_H
 
+#include "EnginePowerController.h"
+
 namespace tankController {
 
-    class SpiSlaveController {
+    class SpiSlaveListener {
+    private:
+        DeviceInfo *deviceInfo;
+        EnginePowerController *enginePowerController;
+
+        static void onData(uint8_t * data, size_t len);
     public:
+
+        SpiSlaveListener(DeviceInfo*, EnginePowerController*);
+        void init();
 
     };
 }

@@ -457,6 +457,12 @@ namespace tankController {
             errorOccured++;
         }
 
+        if (globalSettings->enginesLogBuffer > 200){
+            globalSettings->enginesLogBuffer = 200;
+        } else if (globalSettings->enginesLogBuffer <= 10){
+            globalSettings->enginesLogBuffer = 10;
+        }
+
         if (!errorOccured) {
             // нет ошибок. Можно все сохранить
             deviceInfo->settingsManager->saveSettings();
